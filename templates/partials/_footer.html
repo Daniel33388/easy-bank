@@ -1,0 +1,29 @@
+{% load static %}
+
+<footer id="footer">
+    <img src="{% static 'img/logo.svg' %}" alt="Logo" class="footer__logo">
+    <div class="social-networks">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-pinterest"></i>
+        <i class="fab fa-instagram"></i>
+    </div>
+    <nav class="footer-list">
+        <ul class="list__items">
+            <li class="list__item"><a href="{% url 'about' %}">About Us</a></li>
+            <li class="list__item"><a href="{% url 'contact' %}">Contact</a></li>
+            <li class="list__item"><a href="{% url 'blog' %}">Blog</a></li>
+            <li class="list__item"><a href="#">Support</a></li>
+            <li class="list__item"><a href="#">Privacy Policy</a></li>
+            <li class="list__item"><a href="{% url 'signup' %}">Sign Up</a></li>
+        </ul>
+    </nav>
+    <button class="btn-request">Request Invite</button>
+    <p class="copyright">&copy; Easybank. All Rights Reserved</p>
+
+    <div class="advertise">
+        <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+        <p>Coded by <a href="#">Your Name Here</a>.</p>
+    </div>
+</footer>

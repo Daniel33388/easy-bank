@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <section class="blog">
+        <h1 class="blog__title">Welcome to Our Blog</h1>
+        <p class="blog__description">In this page yo will find Banking news, banks, online banking services, electronic banking, loans, and overall banking industry coverage.</p>
+        <img class="blog__banner" src="{% static 'img/blog.jpg' %}" alt="Blog">
+        <h2 class="blog__subtitle">Latest Articles</h2>
+        {% for post in posts %}
+            <article class="post">
+                <img class="post__image" src="{{ MEDIA_URL }}{{ post.image.url }}" alt="Imagen">
+                <h3 class="post__title">{{ post.title }}</h3>
+                <p class="post__created"><em class="post__author">{{ post.author }}</em> <span class="post__date">{{ post.date }}</span></p>
+                <p class="post__text">{{ post.article }}</p>
+            </article>
+        {% endfor %}
+            
+            
+    </section>
+{% endblock %}
